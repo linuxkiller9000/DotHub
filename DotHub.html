@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>DotHub · Discover Linux dotfiles</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0e14;--panel:#121923;--panel2:#17212d;--line:#273442;--text:#e9eff5;--muted:#94a2af;--cyan:#58d1df;--purple:#a896ff;--green:#79d8b1;--red:#ff9f9f}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}.top{height:68px;padding:0 max(4vw,18px);display:flex;align-items:center;gap:30px;border-bottom:1px solid #ffffff12;background:#0b0e14;position:sticky;top:0;z-index:3}.brand{color:var(--text);font-weight:750;font-size:20px;letter-spacing:-.6px;display:flex;align-items:center;gap:10px}.logo{height:30px;width:30px;border-radius:9px;background:#18313a;color:var(--cyan);display:grid;place-items:center}.brand em{font-style:normal;color:var(--cyan)}.nav{display:flex;gap:24px;font-size:13px;color:#acb8c2}.nav a{color:inherit}.top small{margin-left:auto;color:var(--muted);font-size:11px}.hero{padding:50px max(7vw,22px) 40px;background:radial-gradient(ellipse at 78% 20%,#132330 0,transparent 42%);border-bottom:1px solid #ffffff0b}.eyebrow{text-transform:uppercase;letter-spacing:1.7px;color:#92a9b8;font-size:10px;font-weight:700}.dot{display:inline-block;background:var(--green);width:7px;height:7px;border-radius:50%;margin-right:7px}.hero h1{font-size:clamp(35px,5vw,54px);line-height:1.06;letter-spacing:-2px;margin:16px 0 12px}.hero h1 span{color:var(--cyan)}.hero p{max-width:710px;color:#a8b4bf;margin:0 0 23px}.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.button{appearance:none;border:1px solid #31505b;background:#19343e;color:#c9f4f6;border-radius:9px;padding:10px 15px;font-weight:650;font-size:12px;cursor:pointer}.button:hover{background:#214b57}.button.secondary{background:#151d27;color:#bdc8d1;border-color:var(--line)}.button:disabled{opacity:.55;cursor:wait}.wrap{max-width:1250px;margin:auto;padding:24px max(4vw,18px)}.notice{border:1px solid #394655;border-radius:11px;background:#121a24;color:#b3c0ca;padding:14px 16px;font-size:12px;margin-bottom:20px}.notice strong{color:#e9eff5}.notice details{margin-top:8px}.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:19px 0}.search{flex:1;min-width:230px;display:flex;gap:9px;align-items:center;background:#121923;border:1px solid var(--line);border-radius:9px;padding:0 12px;height:43px}.search span{font-size:20px;color:var(--cyan)}.search input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:var(--text);font:inherit}.select{height:42px;background:#121923;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:0 10px}.stats{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.stat{background:#121923;border:1px solid #202d39;border-radius:9px;padding:9px 13px;font-size:11px;color:var(--muted)}.stat b{font-size:15px;color:var(--text);margin-right:6px}.statusline{font-size:12px;color:var(--muted);min-height:23px}.statusline.error{color:var(--red)}.statusline.ok{color:var(--green)}.gallery{columns:4 235px;column-gap:14px;margin-top:14px}.card{display:inline-block;width:100%;break-inside:avoid;background:var(--panel);border:1px solid #25313c;border-radius:12px;margin:0 0 14px;padding:15px;transition:border-color .15s,transform .15s}.card:hover{border-color:#3d7782;transform:translateY(-2px)}.card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.pill{font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:#91a7b5;border:1px solid #34414d;border-radius:20px;padding:4px 8px}.pill.pending{color:#efd58b;border-color:#665b37}.pill.approved{color:var(--green);border-color:#355746}.pill.dismissed{color:#aab4bc}.card h2{font-size:16px;line-height:1.3;margin:12px 0 7px;overflow-wrap:anywhere}.card h2 a{color:#eaf0f5}.card p{font-size:12px;color:#a5b2bd;margin:0 0 13px;overflow-wrap:anywhere}.meta{display:flex;gap:6px;flex-wrap:wrap;color:#8c9aa5;font-size:10px;margin:10px 0}.card-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #ffffff0d;padding-top:11px;margin-top:12px}.card-foot small{color:#8997a2;font-size:10px}.card-actions{display:flex;gap:6px}.mini{font-size:10px;padding:6px 9px;border-radius:7px}.empty{padding:50px 20px;text-align:center;border:1px dashed #2a3945;border-radius:12px;color:var(--muted)}.empty b{display:block;color:var(--text);font-size:18px;margin:4px}.footer{padding:22px max(4vw,18px);border-top:1px solid #ffffff10;color:#7e8b96;font-size:10px;display:flex;justify-content:space-between;gap:18px}.kbd{border:1px solid #34414c;border-radius:4px;padding:1px 5px;color:#aebbc5}@media(max-width:700px){.top{height:59px;gap:15px}.nav{gap:12px;font-size:11px}.top small{display:none}.hero{padding:38px 20px 30px}.wrap{padding:18px}.gallery{columns:2 155px;column-gap:9px}.card{padding:11px;margin-bottom:9px}.card h2{font-size:14px}.card p{font-size:11px}.footer{display:block}.footer span{display:block;margin-top:6px}}@media(max-width:400px){.nav{gap:9px;font-size:10px}.gallery{columns:1}}
+</style>
+</head>
+<body>
+<header class="top"><a class="brand" href="#home"><span class="logo">D</span><span>Dot<em>Hub</em></span></a><nav class="nav" aria-label="Main"><a href="#home">Home</a><a href="#results">Discover</a><a href="#about">About</a></nav><small>Standalone · saves in this browser</small></header>
+<main id="home">
+<section class="hero"><div class="eyebrow"><span class="dot"></span>OPEN DOTFILES DISCOVERY</div><h1>Find a setup<br><span>that feels like yours.</span></h1><p>Discover public Linux dotfile repositories from GitHub. Findings stay in a local review list until you mark them. This page only collects repository metadata; it never downloads repositories or runs their scripts.</p><div class="actions"><button class="button" id="scan">↻ Scan GitHub now</button><button class="button secondary" id="autoBtn">Automatic scan: On</button><span id="lastScan" class="statusline"></span></div></section>
+<section id="about" class="wrap">
+<div class="notice"><strong>How this file works</strong><br>It calls GitHub’s public REST API from your browser and stores results in this browser’s local storage. Open it in a browser while online. GitHub supports cross-origin browser requests; rate limits or network restrictions can still prevent a scan. <a href="https://docs.github.com/en/rest/using-the-rest-api/using-cors-and-jsonp-to-make-cross-origin-requests" target="_blank" rel="noopener">GitHub CORS docs ↗</a><details><summary>Reddit and other sources</summary><p>Reddit is not fetched from this standalone file. Reddit requires an authorized API integration, and putting its access token in a browser file would expose it. Other sites need a public RSS/Atom feed and server-side robots checks; this file has no backend for that. Use the full DotHub Python app for review-queue collection and moderation.</p></details></div>
+<div class="eyebrow">YOUR LOCAL REVIEW LIST</div><div class="stats"><div class="stat"><b id="total">0</b>found</div><div class="stat"><b id="pending">0</b>pending</div><div class="stat"><b id="approved">0</b>saved</div><div class="stat"><b id="dismissed">0</b>dismissed</div></div>
+<div class="controls"><label class="search"><span>⌕</span><input id="query" type="search" placeholder="Search repository names, descriptions, topics…" aria-label="Search discovered repositories"></label><select class="select" id="state" aria-label="Filter by review status"><option value="all">All findings</option><option value="pending">Pending review</option><option value="approved">Saved</option><option value="dismissed">Dismissed</option></select><select class="select" id="sort" aria-label="Sort findings"><option value="newest">Recently updated</option><option value="stars">Most stars</option><option value="name">Name A–Z</option></select></div>
+<div id="status" class="statusline" role="status" aria-live="polite">Starting local list…</div><div id="results" class="gallery"></div>
+</section></main>
+<footer class="footer"><span>DotHub · Discover. Customize. Download. Install.</span><span>Local review labels do not publish content. Inspect all files before installing.</span></footer>
+<script>
+(()=>{'use strict';
+const KEY='dothub_standalone_findings_v1', LAST='dothub_standalone_last_scan', AUTO='dothub_standalone_auto';
+const QUERIES=['dotfiles in:name','hyprland dotfiles','niri dotfiles','linux rice dotfiles'];
+const $=id=>document.getElementById(id); let findings=load(); let scanning=false;
+function load(){try{const x=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(x)?x.filter(v=>v&&typeof v.full_name==='string'):[]}catch{return[]}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(findings.slice(0,500)))}catch{$('status').textContent='Browser storage is full. Remove dismissed findings or clear this page’s stored data.';$('status').className='statusline error'}}
+function escText(v){return String(v||'')}
+function setStatus(text,kind=''){ $('status').textContent=text;$('status').className='statusline '+kind }
+function validRepo(item){return item&&/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(item.full_name||'')&&new URL(item.html_url).hostname==='github.com'}
+function stats(){ $('total').textContent=findings.length;$('pending').textContent=findings.filter(x=>x.review==='pending').length;$('approved').textContent=findings.filter(x=>x.review==='approved').length;$('dismissed').textContent=findings.filter(x=>x.review==='dismissed').length }
+function render(){
+  stats(); const q=$('query').value.trim().toLowerCase(), state=$('state').value, sort=$('sort').value;
+  let rows=findings.filter(x=>(state==='all'||x.review===state)&&(!q||[x.full_name,x.description,...(x.topics||[])].join(' ').toLowerCase().includes(q)));
+  rows.sort(sort==='stars'?(a,b)=>(b.stars||0)-(a.stars||0):sort==='name'?(a,b)=>a.full_name.localeCompare(b.full_name):(a,b)=>(b.updated_at||'').localeCompare(a.updated_at||''));
+  const root=$('results');root.replaceChildren();
+  if(!rows.length){const e=document.createElement('div');e.className='empty';e.innerHTML='<b>No matching repositories</b>Run a scan or change the filters.';root.append(e);return}
+  for(const item of rows){
+    const card=document.createElement('article');card.className='card';
+    const top=document.createElement('div');top.className='card-top';
+    const pill=document.createElement('span');pill.className='pill '+item.review;pill.textContent=item.review==='approved'?'Saved locally':item.review;
+    const stars=document.createElement('span');stars.className='pill';stars.textContent='★ '+Number(item.stars||0).toLocaleString();top.append(pill,stars);
+    const h=document.createElement('h2'), link=document.createElement('a');link.href=item.html_url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=item.full_name;h.append(link);
+    const desc=document.createElement('p');desc.textContent=item.description||'No repository description.';
+    const meta=document.createElement('div');meta.className='meta';
+    for(const label of [item.language||'Language not listed',item.license||'License unknown',item.default_branch?'Branch: '+item.default_branch:'']){if(!label)continue;const s=document.createElement('span');s.className='pill';s.textContent=label;meta.append(s)}
+    const topics=document.createElement('div');topics.className='meta';for(const t of (item.topics||[]).slice(0,7)){const s=document.createElement('span');s.className='pill';s.textContent=t;topics.append(s)}
+    const foot=document.createElement('div');foot.className='card-foot';const small=document.createElement('small');small.textContent='Updated '+(item.updated_at?new Date(item.updated_at).toLocaleDateString():'date unknown');
+    const actions=document.createElement('div');actions.className='card-actions';
+    if(item.review!=='approved'){const keep=document.createElement('button');keep.className='button mini';keep.textContent='Save';keep.onclick=()=>review(item.id,'approved');actions.append(keep)}
+    if(item.review!=='dismissed'){const skip=document.createElement('button');skip.className='button secondary mini';skip.textContent='Dismiss';skip.onclick=()=>review(item.id,'dismissed');actions.append(skip)}
+    foot.append(small,actions);card.append(top,h,desc,meta,topics,foot);root.append(card)
+  }
+}
+function review(id,state){const item=findings.find(x=>x.id===id);if(item){item.review=state;save();render()}}
+async function scan(){
+  if(scanning)return;scanning=true;const btn=$('scan');btn.disabled=true;btn.textContent='Scanning…';setStatus('Searching GitHub for dotfiles and Linux desktop setups. Fetching repository metadata only…');
+  let added=0,checked=0,errors=[];const existing=new Map(findings.map(x=>[x.id,x]));
+  try{
+    for(const q of QUERIES){
+      const url='https://api.github.com/search/repositories?'+new URLSearchParams({q,sort:'updated',order:'desc',per_page:'30'});
+      const response=await fetch(url,{headers:{Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}});
+      if(!response.ok){if(response.status===403||response.status===429)throw new Error('GitHub rate limit reached. Wait before scanning again.');throw new Error('GitHub returned HTTP '+response.status)}
+      const data=await response.json();
+      for(const raw of (data.items||[])){
+        let okay=false;try{okay=validRepo(raw)}catch{}
+        if(!okay)continue;checked++;
+        const id='github:'+raw.full_name.toLowerCase(), old=existing.get(id);
+        const entry={id,full_name:raw.full_name,html_url:raw.html_url,description:raw.description||'',stars:Number(raw.stargazers_count)||0,language:raw.language||'',topics:Array.isArray(raw.topics)?raw.topics:[],license:raw.license?.spdx_id||'Unknown',default_branch:raw.default_branch||'',updated_at:raw.updated_at||'',review:old?.review||'pending',first_seen:old?.first_seen||new Date().toISOString()};
+        if(!old){existing.set(id,entry);added++}else existing.set(id,{...entry,review:old.review,first_seen:old.first_seen});
+      }
+    }
+    findings=[...existing.values()].sort((a,b)=>(b.updated_at||'').localeCompare(a.updated_at||'')).slice(0,500);save();localStorage.setItem(LAST,new Date().toISOString());render();
+    setStatus(`Scan finished. ${checked} results checked; ${added} new repositories added to your local review list.`, 'ok');
+  }catch(error){setStatus(error.message||'GitHub could not be reached. Check your connection and try again.','error')}
+  finally{scanning=false;btn.disabled=false;btn.textContent='↻ Scan GitHub now';$('lastScan').textContent=localStorage.getItem(LAST)?'Last scan: '+new Date(localStorage.getItem(LAST)).toLocaleString():''}
+}
+function autoEnabled(){return localStorage.getItem(AUTO)!=='off'}
+function autoLabel(){ $('autoBtn').textContent='Automatic scan: '+(autoEnabled()?'On':'Off') }
+$('scan').addEventListener('click',scan);$('autoBtn').addEventListener('click',()=>{localStorage.setItem(AUTO,autoEnabled()?'off':'on');autoLabel();setStatus(autoEnabled()?'Automatic scans enabled. The next scan runs when due while this file is open.':'Automatic scans paused. You can still scan manually.')});
+['query','state','sort'].forEach(id=>$(id).addEventListener(id==='query'?'input':'change',render));
+autoLabel();$('lastScan').textContent=localStorage.getItem(LAST)?'Last scan: '+new Date(localStorage.getItem(LAST)).toLocaleString():'';render();
+const twelveHours=12*60*60*1000;
+if(autoEnabled()&&(!localStorage.getItem(LAST)||Date.now()-Date.parse(localStorage.getItem(LAST))>=twelveHours))scan();
+setInterval(()=>{if(autoEnabled()&&!scanning&&(!localStorage.getItem(LAST)||Date.now()-Date.parse(localStorage.getItem(LAST))>=twelveHours))scan()},60*1000);
+})();
+</script>
+</body>
+</html>
